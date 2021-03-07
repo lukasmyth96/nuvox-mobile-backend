@@ -1,7 +1,9 @@
 matplotlib == 3.3.3
 pytest==6.2.2
+fastapi>=0.63.0
 flake8
 requests
 tqdm
 torch>=1.7.0
 transformers>=4.1.0
+uvicorn[standard]
