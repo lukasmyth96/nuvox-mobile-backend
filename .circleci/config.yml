@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  python: circleci/python@1.3.2
-
 jobs:
   build-and-test:
     executor: python/default
@@ -11,11 +8,14 @@ jobs:
       - restore_cache:
           key: deps1-{{ checksum "requirements.txt" }}
       - run:
-          - name: Install dependencies in virtual environemnt
-          - command: |
-            python3 -m venv venv
-            source venv/bin/activate
-            pip install -r requirements.txt
+          - name: Create virtual environment
+          - command: python3 -m venv venv
+      -run:
+        - name: Activate virtual environemnt
+        - command: source ./venv/bin/activate
+      -run:
+        - name: Install requirements
+        - command: pip install -r requirements.txt
       - save_cache:
           key: deps1-{{ checksum "requirements.txt" }}
           paths:
