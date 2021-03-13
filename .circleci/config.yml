@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-            key: deps1-{{ checksum "requirements.txt" }}
+          key: deps1-{{ checksum "requirements.txt" }}
       - run:
           - name: Install dependencies in virtual environemnt
           - command: |
@@ -24,8 +24,8 @@ jobs:
           command: python -m pytest
           name: Run tests
       - run:
-         command: flake8 .
-         name: Run flake8
+          command: flake8 .
+          name: Run flake8
 
 workflows:
   main:
