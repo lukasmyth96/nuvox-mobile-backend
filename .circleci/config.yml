@@ -15,7 +15,6 @@ jobs:
               python3 -m venv venv
               source ./venv/bin/activate
               pip install -r requirements.txt
-          - name: Setup environment and install requirements
       - save_cache:
           key: deps1-{{ checksum "requirements.txt" }}
           paths:
