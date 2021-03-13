@@ -17,8 +17,7 @@ def point_line_distance(point: Tuple[float, float],
         return distance(point, start_point)
     else:
         n = abs(
-            (end_point[0] - start_point[0]) * (start_point[1] - point[1]) -
-            (start_point[0] - point[0]) * (end_point[1] - start_point[1])
+            (end_point[0] - start_point[0]) * (start_point[1] - point[1]) - (start_point[0] - point[0]) * (end_point[1] - start_point[1])
         )
         d = sqrt(
             (end_point[0] - start_point[0]) ** 2 + (end_point[1] - start_point[1]) ** 2

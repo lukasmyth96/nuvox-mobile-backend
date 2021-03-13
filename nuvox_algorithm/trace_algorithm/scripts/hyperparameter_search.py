@@ -4,8 +4,6 @@ from nuvox_algorithm.trace_algorithm.utils.load_dataset import load_train_set
 from nuvox_algorithm.trace_algorithm import TraceAlgorithm
 from nuvox_algorithm.trace_algorithm.scripts.evaluate_trace_algorithm import main_evaluate_trace_algorithm
 
-
-
 if __name__ == '__main__':
     """This script performs a grid search to find the optimal combination
     of rdp_threshold and angle_threshold."""

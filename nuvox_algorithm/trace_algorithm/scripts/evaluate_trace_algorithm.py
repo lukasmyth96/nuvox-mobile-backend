@@ -40,7 +40,7 @@ if __name__ == '__main__':
     """
     This script evaluates your trace algorithm on a dataset of collected swipes stored in
     a JSON file. Once complete it will print the top-1 and top-3 accuracy of your algorithm.
-    
+
     Notes
     ------
     - If your trace algorithm uses a machine learning model then you should edit this script
