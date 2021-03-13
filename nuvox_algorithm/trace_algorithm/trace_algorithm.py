@@ -90,7 +90,6 @@ class TraceAlgorithm:
             _kis: prob for _kis in corner_to_corner_variants
         }
 
-
         return kis_to_predicted_probability
 
     @staticmethod

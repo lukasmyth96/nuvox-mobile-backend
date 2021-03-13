@@ -64,11 +64,13 @@ def animate_swipe(swipe: Swipe, repeat: Optional[bool] = True):
                 y.append(trace_point.y * height)
         sc.set_offsets(np.c_[x, y])
 
-    ani = matplotlib.animation.FuncAnimation(fig=fig,
-                                             func=animate,
-                                             frames=required_frames,
-                                             interval=interval_ms,
-                                             repeat=repeat)
+    matplotlib.animation.FuncAnimation(
+        fig=fig,
+        func=animate,
+        frames=required_frames,
+        interval=interval_ms,
+        repeat=repeat
+    )
     plt.show()
 
 

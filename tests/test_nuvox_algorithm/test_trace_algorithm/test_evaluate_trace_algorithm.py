@@ -1,4 +1,4 @@
-from nuvox_algorithm.core import   Swipe, TracePoint
+from nuvox_algorithm.core import Swipe, TracePoint
 from nuvox_algorithm.trace_algorithm import TraceAlgorithm
 from nuvox_algorithm.trace_algorithm.scripts.evaluate_trace_algorithm import main_evaluate_trace_algorithm, ranked_key_id_sequences
 

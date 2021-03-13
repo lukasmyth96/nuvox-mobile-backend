@@ -17,7 +17,7 @@ if __name__ == '__main__':
     - top-3 accuracy (% of prompts for which the model's top-3 predictions contain the true next word)
     - average true token rank (The average ranking of the true next word among the models predictions)
     - average true token prob (The average probability assigned to the true next token.)
-    
+
     Notes
     --------
     - If FILTER_BY_KEY_ID_SEQUENCE is set to True below then the language model will only consider
