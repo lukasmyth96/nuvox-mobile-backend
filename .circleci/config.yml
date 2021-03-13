@@ -1,22 +1,31 @@
 version: 2.1
 
 orbs:
-  python: circleci/python@0.2.1
+  python: circleci/python@1.3.2
 
 jobs:
   build-and-test:
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
+      - restore_cache:
+            key: deps1-{{ checksum "requirements.txt" }}
+      - run:
+          - command: |
+              python3 -m venv venv
+              source ./venv/bin/activate
+              pip install -r requirements.txt
+          - name: Setup environment and install requirements
+      - save_cache:
+          key: deps1-{{ checksum "requirements.txt" }}
+          paths:
+            - "venv"
       - run:
           command: python -m pytest
-          name: Test
+          name: Run tests
       - run:
          command: flake8 .
-         name: Flake8
+         name: Run flake8
 
 workflows:
   main:
