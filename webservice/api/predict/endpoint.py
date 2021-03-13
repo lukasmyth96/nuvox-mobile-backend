@@ -29,5 +29,5 @@ def predict(request: Request, body: PredictRequest) -> PredictResponse:
 
     return PredictResponse(
         action=action,
-        words=predicted_words,
+        predicted_words=predicted_words,
     )

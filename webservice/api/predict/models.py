@@ -16,4 +16,4 @@ class PredictRequest(BaseModel):
 
 class PredictResponse(BaseModel):
     action: str
-    words: List[str]
+    predicted_words: List[str]
